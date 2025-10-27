@@ -1,5 +1,8 @@
 import type { RPCReturnMapProxy, RPCReturnMethods } from "@officesdk/rpc";
 import type { DocumentMethods, DocumentParagraphs } from "../../shared";
+import type { DocxParagraphItem } from "@officesdk/editor-sdk-core/combine";
+
+export type {DocumentParagraphs} from '../../shared';
 
 export function createParagraphsFacade(
   methods: RPCReturnMethods<DocumentMethods>,
@@ -16,11 +19,11 @@ export function createParagraphsFacade(
   };
 
   return {
-    getAll: async (): Promise<RPCReturnMapProxy<DocumentParagraphs>> => {
+    getAll: async (): Promise<RPCReturnMapProxy<DocxParagraphItem>[]> => {
       const paragraphs = await getParagraphs();
       return paragraphs.getAll();
     },
-    getOne: async (index: number): Promise<RPCReturnMapProxy<DocumentParagraphs> | null> => {
+    getOne: async (index: number): Promise<RPCReturnMapProxy<DocxParagraphItem> | null> => {
       const paragraphs = await getParagraphs();
       return paragraphs.getOne(index);
     },

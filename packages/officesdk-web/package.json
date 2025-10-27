@@ -10,7 +10,7 @@
     "rollup": "rollup -c"
   },
   "dependencies": {
-    "@officesdk/editor-sdk-core": "^0.0.0-22",
+    "@officesdk/editor-sdk-core": "^0.0.0-23",
     "@officesdk/rpc": "workspace:*"
   }
 }

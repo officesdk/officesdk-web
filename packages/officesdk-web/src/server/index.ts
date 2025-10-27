@@ -72,7 +72,7 @@ export type {
   DatabaseTableSelectionValue,
   DatabaseTableMethods,
   DatabaseTableSheet,
-
+  DocumentParagraphs
 } from '../shared';
 
 export { PresentationExportType, DocumentExportType } from '../shared';

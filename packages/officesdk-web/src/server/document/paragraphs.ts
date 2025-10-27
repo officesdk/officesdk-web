@@ -5,18 +5,21 @@ export function createDocumentParagraphsProxy(paragraphs: DocumentParagraphs): D
   return {
     getAll: async () => {
       const paragraphList = await paragraphs.getAll();
-      return paragraphList.map(para => {
-        getRange: () => {
-          const range = para.getRange();
+      return paragraphList.map(para => ({
+        getRange: async() => {
+          const range = await para.getRange();
           return createDocumentRangeProxy(range)
         }
-      })
+      }))
     },
     getOne: async (index: number) => {
       const para = await paragraphs.getOne(index);
+      if (!para) {
+        return null;
+      }
       return {
-        getRange: () => {
-          const range = para.getRange();
+        getRange: async() => {
+          const range = await para.getRange();
           return createDocumentRangeProxy(range)
         }
       }

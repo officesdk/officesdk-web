@@ -28,7 +28,7 @@ export type { LTDocFacade } from './ltdoc';
 export type { DatabaseTableFacade, DatabaseTableSettings } from './dbtable';
 
 // 文档
-export type { DocumentFacade, DocumentSettings, DocxMenuOptions, DocxToolbarOptions } from './document';
+export type { DocumentFacade, DocumentSettings, DocxMenuOptions, DocxToolbarOptions, DocumentParagraphs } from './document';
 
 // 表格
 export type { SpreadsheetFacade, SpreadsheetSettings } from './spreadsheet';

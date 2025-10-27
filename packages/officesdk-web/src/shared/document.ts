@@ -7,7 +7,7 @@ import type {
   DocxWindowScrollParams,
   DocxRangeValue,
   DocxWindow,
-  DocxWindowScrollIntoViewOptions
+  DocxWindowScrollIntoViewOptions,
   DocxParagraphs
 } from '@officesdk/editor-sdk-core/combine';
 import type { EditorContent } from './editor';
