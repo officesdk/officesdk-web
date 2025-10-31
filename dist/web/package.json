@@ -1,6 +1,6 @@
 {
   "name": "@officesdk/web",
-  "version": "1.0.8-alpha.1",
+  "version": "1.0.9",
   "description": "Web JS SDK for the Office SDK",
   "main": "dist/index.js",
   "types": "./index.d.ts",
